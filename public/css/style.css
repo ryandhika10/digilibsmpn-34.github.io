@@ -1,0 +1,790 @@
+:root{
+    /* Font */
+    --headingFont : "Merriweather",serif;
+    --mainFont : 'Open Sans', sans-serif;
+    /* Color */
+    --primaryColor : #0DCAF0;
+    --secondaryColor : #005B97;
+    --tertiaryColor : #EEAB76;
+    --quarternaryColor : #def7ff;
+    --quinaryColor   : #FFEACF;
+    --background : #fdf5e9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .collapsing {
+        transition-property: height, visibility;
+        transition-duration: .35s;
+    }
+}
+
+html{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: var(--background);
+}
+
+.heading{
+    font-family:var(--headingFont);
+    color: var(--secondaryColor);
+}
+.subheading{
+    font-family:var(--mainFont);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+}
+
+hr{
+    height: 4px;
+    background-color: var(--secondaryColor);
+    border: none;
+    color: var(--secondaryColor);
+}
+
+.login hr, .register hr, .lupa_password hr, .reset_password hr, .verifikasi_email hr{
+    height:0.5px !important;
+    margin: 0.4rem !important;
+}
+
+.login .btn-close, .register .btn-close, .lupa_password .btn-close, .reset_password .btn-close, .verifikasi_email .btn-close, .detailBuku .btn-close, .detail-keranjang .btn-close{
+    top:8px !important;
+    right: 8px !important;
+}
+
+.container {
+    scroll-snap-align: center;
+}
+
+/* Navbar */
+
+.navbar, .main-footer{
+    font-family: var(--headingFont);
+    background-color: var(--secondaryColor) !important;
+    font-size: 0.9rem;
+}
+
+.navbar .navbar-brand{
+    color: var(--quinaryColor);
+    font-size: 1rem;
+    width: 262px;
+    font-weight: 700;
+}
+
+.navbar-brand img{
+    position: absolute;
+    padding-top: 4px;
+}
+
+.navbar-brand span{
+    margin-left: 50px;
+}
+
+.navbar .navbar-brand:hover,.navbar .navbar-brand.active{
+    color: var(--tertiaryColor);
+}
+
+.menu .nav-link{
+    color: var(--quinaryColor) !important;
+}
+
+.menu .nav-link:hover,.menu .nav-link.active{
+    color: var(--tertiaryColor) !important;
+}
+
+.nav-menu .dropdown-item{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-item{
+    margin-left: 50px;
+}
+
+/* Hero */
+
+.hero-title{
+    font-family: var(--headingFont);
+    color: var(--quinaryColor);
+    font-weight: 700;
+    padding-top: 120px;
+    font-size: 1.6rem;
+}
+
+.hero-subheading{
+    font-size: 16px;
+    font-family:var(--mainFont);
+}
+
+.hero-button button{
+    font-family:var(--headingFont) !important;
+    font-weight: 700;
+    background-color: var(--secondaryColor) !important;
+    color: var(--quinaryColor);
+}
+
+.hero-button button:hover{
+    background-color: var(--primaryColor) !important;
+    color: var(--secondaryColor);
+}
+
+.hero {
+    background: linear-gradient(rgba(41, 41, 41, 0.9), rgba(0,0,0,.6)), url("/img/hero-beranda2.jpg") no-repeat;
+    background-size: cover;
+    height: 650px;
+    padding-top: 15%;
+    padding-bottom: 10.5%;
+    color: #FFF;
+}
+
+/* Layanan */
+
+.layanan .card-layanan{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    border-color: white !important;
+    margin-bottom: 20px;
+    box-shadow: 0 0 7px 3px rgba(0,0,0,0.05);
+}
+
+.card-layanan h3{
+    color: var(--secondaryColor);
+}
+
+.layanan .card-layanan:hover{
+    background: linear-gradient(160deg, var(--secondaryColor), rgb(48, 48, 48));
+        transition: all .2s ease-in-out;
+}
+
+.card-layanan:hover h3{
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+.card-layanan:hover p{
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+.lingkaran {
+    display: inline-block;
+    border-radius: 50%;
+    width: 100px;
+    margin: auto !important;
+    margin-top: 40px !important;
+    height: 100px;
+    color: #FFF;
+    background-color:var(--secondaryColor);
+    cursor: pointer;
+}
+
+.lingkaran i {
+    position: relative;
+    top: 30px;
+    font-size: 46px;
+}
+
+.tim img {
+    width: 250px;
+    border: 10px solid var(--primaryColor);
+}
+
+a.social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #ffff;
+    border-radius: 50%;
+    background-color: #333;
+    line-height: 40px;
+}
+
+.buat-css .kategori-dropdown .dropdown-menu {
+    max-height: 155px;
+    overflow-y: auto;
+}
+
+/* Rekomendasi Blog */
+.blog .card-title{
+    font-family: var(--headingFont);
+    font-weight: 700;
+}
+
+.blog .btn{
+    background-color: var(--secondaryColor);
+}
+
+/* Form Login*/
+.form-sm .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-sm input, .button-login,.login-google {
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.form-sm label {
+    color: gray;
+}
+
+.form-signin input#email, .form-signin input#password, .form-signin .invalid-feedback{
+    padding-left: 15px;
+}
+
+/* Form Register */
+
+.form-sm{
+    position:relative;
+}
+
+.form-sm p#peringatan{
+    display: none;
+    margin-bottom: 0.5rem !important;
+    padding-left: 15px !important;
+}
+
+.form-sm span.icon-area{
+    position:absolute;
+    right: 12px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.form-sm span.icon-area i{
+    font-size: 16px;
+}
+
+.form-sm input, .button-register,.register-google,.button-kembali {
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.form-register input, .form-register .invalid-feedback{
+    padding-left: 20px;
+}
+
+/* Register Sebagai */
+
+.card-register .card{
+    text-decoration: none;
+    color: black;
+    font-family: var(--headingFont);
+    background-color: #007ed2;
+    height: 255px;
+    box-shadow:  0 0 7px 7px rgba(0, 0, 0, 0.05);
+    transition: all .3s ease-in-out;
+}
+
+.card-register .card-body{
+    position: absolute;
+    background-color: white;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    transition: all .3s ease-in-out;
+}
+
+.card-register .card:hover .lingkaran{
+    height: 120px !important;
+    width: 120px !important;
+    margin-top: 40px !important;
+    transition: all .3s ease-in-out;
+}
+
+.card-register .card:hover .card-body{
+    background-color: var(--secondaryColor);
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+/* Form Reset Password */
+
+.form-sm input, .button-reset_password{
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.form-register input{
+    padding-left: 20px;
+}
+
+/* Arrow To Top */
+.to-top{
+    background-color: var(--secondaryColor);
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+    margin-bottom: 10px;
+    border-style: none;
+}
+
+.to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer */
+.main-footer{
+    color: var(--quinaryColor) !important;
+    font-size: 1rem !important;
+}
+
+/* Dashboard */
+.masuk-brand .brand-link, .info .nama-user {
+    text-decoration: none;
+}
+/* Navbar Dashboard */
+.dashboard-nav a{
+    margin-right: 45px !important;
+}
+
+.dashboard-nav img{
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+.dashboard-nav i.sidebar{
+    margin-left: 5px !important;
+}
+
+.dashboard-nav .nav-link{
+    color: var(--quinaryColor) !important;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.dashboard-nav .nav-link:hover{
+    color: var(--tertiaryColor) !important;
+}
+
+.dashboard-nav .keluar-dashboard button{
+    text-decoration: none !important;
+    border: none !important;
+    background-color: transparent;
+}
+
+.dashboard-admin .border-ebook{
+    border-color: #f012be!important;
+}
+
+.dashboard-admin .border-siswa{
+    border-color: #fd7e14 !important;
+}
+
+.dashboard-admin .dashboard-post{
+    margin-bottom: 30px !important;
+}
+
+/* Sidebar Dashboard */
+.sidebar ul{
+    padding-left: 0px !important;
+}
+
+/* Profile Dashboard */
+
+.profile img{
+    background-color: rgb(199, 199, 199);
+    border-radius: 50%;
+    box-shadow:  0 0 7px 7px rgba(0, 0, 0, 0.05);
+}
+
+/* Hero-Post */
+/* HERO */
+.hero-postingan{
+    background: url("/img/blog-background2.jpg") no-repeat top;
+    background-size: 100% 100%;
+    height: 720px !important;
+    padding-top: 60px !important;
+    padding-bottom: 50px !important;
+}
+
+.hero-postingan .search-wrapper, .hero-buku .search-wrapper, .hero-ebooks .search-wrapper{
+    color: var(--quinaryColor);
+    background-color: var(--quinaryColor);
+    border-radius: 40px;
+    padding-top: 5px;
+    font-family: var(--secondaryColor);
+    box-shadow:  0 0 10px 10px rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+    border-style: solid;
+    border-width: 4px;
+    border-color: var(--secondaryColor);
+    margin-top: 15px;
+}
+
+.search-wrapper h2{
+    font-family: var(--headingFont);
+}
+
+.hero-postingan .search-wrapper h2, .hero-buku .search-wrapper h2, .hero-ebooks .search-wrapper h2{
+    font-size: 24px;
+    background-color: var(--secondaryColor);
+    border-radius: 20px;
+    position: relative;
+    top: -5px;
+    padding-bottom: 5px;
+}
+
+.hero-postingan .search-wrapper button, .hero-buku .search-wrapper button, .hero-ebooks .search-wrapper button{
+    background-color: var(--secondaryColor);
+    color: var(--quinaryColor);
+}
+.hero-postingan .alert, .hero-buku .alert, .hero-ebooks .alert{
+    border-radius: 20px;
+}
+
+.hero-post, .daftar-buku, .daftar-ebook, .hero-ebook, .hero-detail-ebook{
+    position: relative;
+}
+
+.daftar-buku>a>img:hover, .hero-post>a>img:hover, .daftar-ebook>a>img:hover{
+    filter: brightness(70%);
+    transition: all .2s ease-in-out;
+}
+
+.hero-post .post-populer, .hero-ebook .ebook-populer{
+    height: 250px !important;
+    width: 100% !important;
+}
+
+.first-img>a>img{
+    height: 500px !important;
+    width: 100%;
+}
+
+.second-img>a>img{
+    height: 241px !important;
+    width: 100%;
+}
+
+.hero-post-badges, .hero-buku-badges, .hero-ebook-badges{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 150px;
+}
+
+.hero-post-badges>a, .hero-buku-badges>a, .hero-ebook-badges>a{
+    display: block;
+    background-color: var(--secondaryColor);
+    color: var(--quinaryColor);
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.hero-post-badges>a:hover, .hero-buku-badges>a:hover, .hero-ebook-badges>a:hover{
+    color: var(--tertiaryColor);
+}
+
+.hero-post-content, .hero-buku-content, .hero-ebook-content{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    color: var(--quinaryColor);
+    background-color: var(--secondaryColor);
+}
+
+.hero-post-content .judul-kedua, .hero-buku-content .judul-kedua, .hero-ebook-content .judul-kedua{
+    margin-bottom: 0px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero-post-content a, .blog-post a, .hero-buku-content a, .hero-ebook-content a{
+    color: var(--quinaryColor);
+}
+
+.hero-post-content a:hover, .blog-post a:hover, .hero-buku-content a:hover, .hero-ebook-content a:hover{
+    color: var(--tertiaryColor);
+}
+
+.hero-post-content h6, .hero-buku-content h6, .hero-ebook-content h6{
+    font-weight: 400 !important;
+    font-size: 0.8rem !important;
+}
+
+.blog-post h6{
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+}
+
+.blog-post .kategori>a{
+    background-color: rgba(0, 0, 0, 0.7);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.blog-post .kategori{
+    margin-top: 7px;
+}
+
+.blog-post small{
+    font-weight: 400 !important;
+    font-size: 0.8rem !important;
+    color: var(--quinaryColor);
+}
+
+.hero-post-content span.badge{
+    background-color: var(--primaryColor);
+    color: #004F69;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* Main Blog */
+.blog-posts{
+    background-color: var(--background);
+    color: #E6F4F1;
+}
+
+.blog-posts .blog-wrapper{
+    background-color: white;
+}
+
+.blog-post{
+    background-color: #004F69;
+}
+
+.blog-post h3>a{
+    font-size: 1.4rem;
+    font-family: var(--headingFont);
+    font-weight: 700;
+    color: var(--quinaryColor) !important;
+}
+
+.blog-post h3>a:hover{
+    color: var(--tertiaryColor) !important;
+}
+
+.blog-post img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-post p{
+    font-size: 0.9rem;
+    font-family: var(--mainFont);
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.blog-post .col-sm-8{
+    border-left: 3px solid var(--primaryColor);
+}
+
+.badge{
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+}
+
+.badge .hero-post-content>span{
+    font-size: 16px !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--quinaryColor) !important;
+    font-weight: 400;
+}
+
+.badge>a>span{
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--primaryColor);
+    color: #002E46 !important;
+    text-decoration: none
+}
+
+/* ASIDE */
+
+.author-social-links i{
+    color: var(--quinaryColor);
+    padding-right: 10px;
+}
+
+.aside-heading{
+    color: var(--quinaryColor);
+    font-family: var(--headingFont);
+    font-weight: 700;
+}
+
+.author-wrapper .heading-wrapper{
+    background-color: #004F69;
+    border-radius: 5px;
+}
+
+article.author{
+    background-color: #004F69;
+    padding: 10px;
+}
+
+.author p{
+    font-size: 0.9rem;
+    color: white;
+    font-family: var(--mainFont);
+    font-weight: 400;
+}
+.author img{
+    border-radius: 50%;
+}
+.author .col-sm-8{
+    border-left: 3px solid var(--primaryColor);
+}
+
+.author h5{
+    color: var(--quinaryColor);
+    font-family: var(--headingFont);
+    font-weight: 700;
+}
+
+.badges{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.badges>a{
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.2rem;
+    display: inline-block;
+    background-color: var(--secondaryColor);
+    color: white !important;
+    text-decoration: none
+}
+
+.badges>a:hover{
+    background-color: #099fbd;
+    transition: all .2s ease-in-out;
+}
+
+/* Detail Post */
+/* HERO */
+.detail-post, .detail-ebook{
+    padding-top: 60px !important;
+    padding-bottom: 50px !important;
+    margin-top: 12px;
+}
+
+.konten-post, .konten-ebook{
+    background-color: white;
+    padding-top: 10px;
+}
+
+.detail-post .p-content, .detail-ebook .p-content{
+    font-family: var(--mainFont);
+    margin-bottom: 50px;
+    border-bottom-style: solid;
+    border-color: rgb(218, 218, 218);
+}
+
+.detail-ebook .p-content button{
+    background-color: var(--secondaryColor) !important;
+}
+
+.konten-post .kembali>a, .detail-keranjang .kembali>a, .konten-ebook .kembali>a{
+    font-family: var(--mainFont) !important;
+    background-color: var(--secondaryColor) !important;
+    color: var(--quinaryColor) !important;
+}
+
+.konten-post .kembali>a:hover, .detail-keranjang .kembali>a:hover, .konten-ebook .kembali>a:hover{
+    color: var(--tertiaryColor) !important;
+}
+
+.konten-post .like_komen{
+    font-family: var(--mainFont) !important;
+    bottom: 20px;
+}
+
+.konten-post .like_komen>a:hover{
+    color: white !important;
+}
+
+.detail-img>img{
+    height: 500px;
+    width: 100%;
+}
+
+/* Buku */
+
+.hero-buku, .detailBuku, .detail-keranjang, .hero-ebooks{
+    margin-top: 60px !important;
+    margin-bottom: 50px !important;
+}
+
+.hero-buku .keranjang a{
+    background-color: var(--secondaryColor);
+    color: var(--quinaryColor);
+}
+
+.hero-buku .keranjang a:hover{
+    background-color: var(--secondaryColor);
+    color: var(--tertiaryColor);
+}
+
+.hero-buku-badges, .hero-ebook-badges{
+    right: 0px;
+    width: 125px;
+}
+
+.hero-buku-badges>a, .hero-ebook-badges>a{
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.hero-buku-content h5, .hero-ebook-content h5{
+    font-size: 14px !important;
+}
+
+/* Keranjang */
+.keranjang .mainfont{
+    font-family: var(--mainFont);
+}
+
+/* E-Book */
+
+.hero-detail-ebook .img-wrapper img{
+    height: 500px;
+}
+
+.hero-ebook-content h2{
+    font-size: 28px;
+}
+
+
+
