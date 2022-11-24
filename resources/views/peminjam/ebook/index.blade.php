@@ -22,7 +22,7 @@
                             <div class="input-group mb-1">
                                 <input type="text" class="form-control" placeholder="Cari: Judul, Penulis, ..." name="search" value="{{ request('search') }}">
                                 <div class="input-group-append">
-                                    <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Cari</button>
+                                    <button class="btn-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Cari</button>
                                 </div>
                             </div>
                         </form>
